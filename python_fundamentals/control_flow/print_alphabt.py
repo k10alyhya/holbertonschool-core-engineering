@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 result = ""
 
 for i in range(97, 123):
@@ -9,4 +8,4 @@ for i in range(97, 123):
     new_char = chr(i)
     result = result + new_char
 
-print("{}".format(result))
+print("{}".format(result), end="")
