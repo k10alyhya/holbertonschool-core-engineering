@@ -9,4 +9,4 @@ for i in range(97, 123):
     new_char = chr(i)
     result = result + new_char
 
-print(f"result")
+print("{}".format(result))
