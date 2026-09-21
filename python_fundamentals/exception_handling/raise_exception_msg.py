@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+  #!/usr/bin/env python3
 
 
 def raise_exception_msg(message=""):
-    message = "Something went wrong"
+    """Raise a NameError with a custom message."""
     raise NameError(message)
