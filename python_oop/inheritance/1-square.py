@@ -8,8 +8,8 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Initialize a square using the size for both width and height."""
-        # نستدعي __init__ حق الأب Rectangle، ونمرر له size
-        # مرتين (مرة كـ width ومرة كـ height)، لأن المربع
-        # هو مستطيل عرضه وطوله متساويين. الأب هو اللي يتكفل
-        # بالتحقق (integer_validator) وتخزين القيم.
+        # نتحقق من size بأنفسنا أول، عشان لو فشل التحقق تطلع
+        # رسالة الخطأ بكلمة "size" (مو "width") - لأن لو تركنا
+        # الأب يتحقق منها لوحده، بيعتبرها width ويغلط بالرسالة.
+        self.integer_validator("size", size)
         super().__init__(size, size)
