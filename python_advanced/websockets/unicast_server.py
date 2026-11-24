@@ -2,6 +2,7 @@
 """WebSocket server that validates incoming messages."""
 import asyncio
 
+
 from websockets.asyncio.server import serve
 from websockets.exceptions import ConnectionClosed
 
@@ -18,6 +19,7 @@ async def connection_handler(websocket):
         pass
     finally:
         connected_clients.remove(websocket)
+
 
 async def main():
     """Start the server and keep it running forever."""
